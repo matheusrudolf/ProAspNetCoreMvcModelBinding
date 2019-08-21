@@ -65,5 +65,9 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("Nomes", nomes ?? new string[0]);
         }
+        public ViewResult Nomes2(IList<string> nomes)
+        {
+            return View("Nomes2", nomes ?? new List<string>());
+        }
     }
 }
