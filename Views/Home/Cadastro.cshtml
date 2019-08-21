@@ -25,6 +25,14 @@
         <select asp-for="Permissao" class="form-control"
                 asp-items="@new SelectList(Enum.GetNames(typeof(Permissao)))"></select>
     </div>
+    <div class="form-group">
+        <label asp-for="EnderecoCasa.Cidade"></label>
+        <input asp-for="EnderecoCasa.Cidade" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="EnderecoCasa.Pais"></label>
+        <input asp-for="EnderecoCasa.Pais" class="form-control" />
+    </div>
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 </body>
