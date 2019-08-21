@@ -1,0 +1,10 @@
+﻿@model Pessoa
+@{ Layout = "_Layout"; }
+
+<div class="bg-primary panel-body"><h2>Pessoa</h2></div>
+<table class="table table-condensed table-bordered table-striped">
+    <tr><th>ID:</th><td>@Model.PessoaId</td></tr>
+    <tr><th>Nome:</th><td>@Model.Nome</td></tr>
+    <tr><th>Sobrenome:</th><td>@Model.Sobrenome</td></tr>
+    <tr><th>Permissão:</th><td>@Model.Permissao</td></tr>
+</table>
