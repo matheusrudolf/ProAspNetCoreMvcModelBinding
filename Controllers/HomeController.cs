@@ -53,5 +53,13 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("EnderecoBasico", endereco);
         }
+        public ViewResult EnderecoBasico2([Bind(Prefix = nameof(Pessoa.EnderecoCasa))] EnderecoResumido endereco)
+        {
+            return View("EnderecoBasico", endereco);
+        }
+        public ViewResult EnderecoBasico3([Bind(nameof(EnderecoResumido.Cidade), Prefix = nameof(Pessoa.EnderecoCasa))] EnderecoResumido endereco)
+        {
+            return View("EnderecoBasico", endereco);
+        }
     }
 }
