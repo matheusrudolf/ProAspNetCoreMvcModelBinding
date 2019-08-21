@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ProAspNetCoreMvcModelBinding.Models
 {
-    [Bind(nameof(Cidade))]
+    //[Bind(nameof(Cidade))]
     public class EnderecoResumido
     {
         public string Cidade { get; set; }
-        [BindNever]
+        //[BindNever]
         public string Pais { get; set; }
     }
 }
