@@ -69,5 +69,9 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("Nomes2", nomes ?? new List<string>());
         }
+        public ViewResult Enderecos(IList<EnderecoResumido> enderecos)
+        {
+            return View("Enderecos", enderecos ?? new List<EnderecoResumido>());
+        }
     }
 }
