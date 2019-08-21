@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProAspNetCoreMvcModelBinding.Models;
 using ProAspNetCoreMvcModelBinding.Repository;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,19 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         public ViewResult Index2(int id)
         {
             return View("Index", repository[id] ?? repository.Pessoa.First());
+        }
+
+        public IActionResult Index3(int? id)
+        {
+            Pessoa pessoa;
+            if (id.HasValue && (pessoa = repository[id.Value]) != null)
+            {
+                return View(pessoa);
+            }
+            else
+            {
+                return NotFound();
+            }
         }
     }
 }
