@@ -61,5 +61,9 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("EnderecoBasico", endereco);
         }
+        public ViewResult Nomes(string[] nomes)
+        {
+            return View("Nomes", nomes ?? new string[0]);
+        }
     }
 }
