@@ -38,5 +38,15 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
                 return NotFound();
             }
         }
+        public ViewResult Cadastro()
+        {
+            return View("Cadastro", new Pessoa());
+        }
+
+        [HttpPost]
+        public ViewResult Cadastro(Pessoa pessoa)
+        {
+            return View("Index", pessoa);
+        }
     }
 }
