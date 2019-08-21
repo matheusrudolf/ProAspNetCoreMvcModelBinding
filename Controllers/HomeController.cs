@@ -48,5 +48,10 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("Index", pessoa);
         }
+
+        public ViewResult EnderecoBasico(EnderecoResumido endereco)
+        {
+            return View("EnderecoBasico", endereco);
+        }
     }
 }
