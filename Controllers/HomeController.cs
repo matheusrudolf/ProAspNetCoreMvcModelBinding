@@ -19,5 +19,10 @@ namespace ProAspNetCoreMvcModelBinding.Controllers
         {
             return View("Index", repository[id]);
         }
+
+        public ViewResult Index2(int id)
+        {
+            return View("Index", repository[id] ?? repository.Pessoa.First());
+        }
     }
 }
